@@ -62,22 +62,24 @@ header {
 
 .product-grid-four {
     display: grid;
+    /* Desktop: 4 equal columns */
     grid-template-columns: repeat(4, 1fr); 
-    gap: 30px;
+    gap: 30px; /* Space between cards */
+    padding: 20px 0;
 }
 
 /* Card Styling for White Background */
 .product-card {
-    background: var(--white);
+    background: #ffffff;
     padding: 24px;
     border-radius: 16px;
-    border: 1px solid #E2E8F0; /* Light border for definition */
+    border: 1px solid #E2E8F0;
     text-align: center;
-    /* Soft shadow to create depth on white background */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03); 
-    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .product-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(96, 57, 187, 0.1); /* Purple-tinted shadow */
@@ -103,6 +105,24 @@ header {
     display: inline-block;
 }
 
+/* Tablet View: 2 columns */
+@media screen and (max-width: 1024px) {
+    .product-grid-four {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Mobile View: 1 column */
+@media screen and (max-width: 600px) {
+    .product-grid-four {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem; /* Shrinks text for small screens */
+    }
+}
 
 
 

@@ -1,8 +1,8 @@
 :root {
-    --thynk-purple: #6039BB;
+    --thynk-purple: #57147E;
     --thynk-dark: #1a0b16;
-    --thynk-pink: #F25F9C;
-    --thynk-light-gray: #F9F9FB;
+    --thynk-pink: #FF4DB8;
+    --thynk-light-gray: #D3D3D3;
     --white: #ffffff;
 }
 
@@ -76,3 +76,4 @@ body {
     font-weight: 600;
     display: inline-block;
 }
+

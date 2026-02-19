@@ -8,6 +8,7 @@
 
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Inter', sans-serif;
     background-color: var(--white); /* Updated to pure white */
     color: var(--thynk-dark);
@@ -22,7 +23,7 @@ header {
     align-items: center;
     border-bottom: 1px solid #f0f0f0;
     /* Forces the header to never exceed a certain height */
-    height: 50px; 
+    height: 45px; 
 }
 
 .logo {
@@ -41,7 +42,7 @@ header {
 
 /* Updated Hero Section for White Background */
 .hero {
-    padding: 60px 10% 80px 10%;
+    padding: 30px 10% 60px 10%;
     background: var(--white);
     text-align: left;
     border-bottom: 1px solid #f0f0f0; /* Subtle separator */
@@ -51,7 +52,14 @@ header {
     font-size: 3.5rem;
     color: var(--thynk-dark);
     line-height: 1.1;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    color: var(--thynk-purple);
+    font-weight: 600;
+    /* Reduce bottom margin to sit closer to the headline */
+    margin-bottom: 5px; 
 }
 
 /* Shop Container Layout */
@@ -123,6 +131,7 @@ header {
         font-size: 2.2rem; /* Shrinks text for small screens */
     }
 }
+
 
 
 

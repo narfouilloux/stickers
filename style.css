@@ -23,7 +23,7 @@ header {
 }
 
 .logo {
-    height: 32px; /* Set a fixed height for a clean, modern look */
+    height: 20px; /* Set a fixed height for a clean, modern look */
     width: auto;  /* Maintains aspect ratio */
     display: block;
     transition: opacity 0.3s ease;
@@ -96,5 +96,6 @@ header {
     font-weight: 600;
     display: inline-block;
 }
+
 
 

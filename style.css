@@ -15,17 +15,23 @@ body {
 
 header {
     background: var(--white);
-    padding: 20px 10%; /* Matches the side padding of your hero section */
+    /* Reduced vertical padding from 20px to 10px */
+    padding: 10px 10%; 
     display: flex;
-    justify-content: flex-start; /* Aligns logo to the left */
+    justify-content: flex-start;
     align-items: center;
     border-bottom: 1px solid #f0f0f0;
+    /* Forces the header to never exceed a certain height */
+    height: 50px; 
 }
 
 .logo {
-    height: 20px; /* Set a fixed height for a clean, modern look */
-    width: auto;  /* Maintains aspect ratio */
+    /* Scaling down further to 24px often fits the SaaS aesthetic better */
+    height: 24px; 
+    width: auto;
     display: block;
+    /* This helps if the image has weird internal margins */
+    object-fit: contain; 
     transition: opacity 0.3s ease;
 }
 
@@ -96,6 +102,7 @@ header {
     font-weight: 600;
     display: inline-block;
 }
+
 
 
 

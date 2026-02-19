@@ -1,132 +1,78 @@
-/* General Page Styling */
+:root {
+    --thynk-purple: #6039BB;
+    --thynk-dark: #1a0b16;
+    --thynk-pink: #F25F9C;
+    --thynk-light-gray: #F9F9FB;
+    --white: #ffffff;
+}
+
 body {
-    /* Creates the vortex effect from the center of the screen */
-    background: radial-gradient(circle, #7e2310 0%, #1a0b16 100%);
-    background-attachment: fixed; /* Keeps the gradient still while scrolling */
-    color: #ffffff;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--white); /* Updated to pure white */
+    color: var(--thynk-dark);
 }
 
-header {
-    padding: 40px 0;
+/* Updated Hero Section for White Background */
+.hero {
+    padding: 100px 10%;
+    background: var(--white);
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0; /* Subtle separator */
 }
 
-.logo {
-    max-width: 200px;
-    filter: drop-shadow(0 0 10px rgba(255, 102, 0, 0.5));
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--thynk-dark);
+    line-height: 1.1;
+    margin-bottom: 24px;
 }
 
-h1 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-bottom: 40px;
-    /* Adding a slight pink glow to match the 'CHAOS' text */
-    text-shadow: 0 0 15px #e91e63;
-}
-
-/* Shop Layout */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    width: 90%;
-    padding-bottom: 50px;
-}
-
-/* Individual Sticker Cards */
-.product-card {
-    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
-    backdrop-filter: blur(10px); /* Modern frosted glass effect */
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 102, 0, 0.3);
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-.product-card:hover {
-    border-color: #ff6600;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.product-card img {
-    width: 100%;
-    max-width: 220px;
-    height: auto;
-    margin-bottom: 20px;
-    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.5));
-}
-
-/* The "Order" Button */
-.buy-button {
-    background: linear-gradient(135deg, #F25F9C 0%, #ff6600 100%);
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 800;
-    display: inline-block;
-    margin-top: 15px;
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: none;
-    cursor: pointer;
-}
-
-.buy-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(233, 30, 99, 0.6);
-}
-
+/* Shop Container Layout */
 .shop-container {
-    padding: 60px 5%;
-    max-width: 1400px;
-    margin: 0 auto;
+    padding: 80px 10%;
+    background-color: var(--white);
 }
 
 .product-grid-four {
     display: grid;
-    /* Forces 4 equal columns on desktop */
     grid-template-columns: repeat(4, 1fr); 
-    gap: 20px;
+    gap: 30px;
 }
 
+/* Card Styling for White Background */
 .product-card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #E2E8F0; /* Clean Thynk-style border */
+    background: var(--white);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #E2E8F0; /* Light border for definition */
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    /* Soft shadow to create depth on white background */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03); 
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(96, 57, 187, 0.1); /* Purple-tinted shadow */
+    border-color: var(--thynk-purple);
 }
 
 .product-card img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    /* Optional: adds a light shadow to the stickers themselves */
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
 }
 
-/* Responsive adjustment: 2x2 on tablets, 1 column on mobile */
-@media (max-width: 1024px) {
-    .product-grid-four {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .product-grid-four {
-        grid-template-columns: 1fr;
-    }
+/* CTA Button Styling */
+.btn-pink {
+    background-color: var(--thynk-pink);
+    color: var(--white) !important;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
 }

@@ -13,6 +13,26 @@ body {
     color: var(--thynk-dark);
 }
 
+header {
+    background: var(--white);
+    padding: 20px 10%; /* Matches the side padding of your hero section */
+    display: flex;
+    justify-content: flex-start; /* Aligns logo to the left */
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+    height: 32px; /* Set a fixed height for a clean, modern look */
+    width: auto;  /* Maintains aspect ratio */
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
 /* Updated Hero Section for White Background */
 .hero {
     padding: 100px 10%;
@@ -76,4 +96,5 @@ body {
     font-weight: 600;
     display: inline-block;
 }
+
 

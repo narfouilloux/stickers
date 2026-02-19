@@ -41,7 +41,7 @@ header {
 
 /* Updated Hero Section for White Background */
 .hero {
-    padding: 80px 10%; /* Slightly reduced top padding for better flow */
+    padding: 60px 10% 80px 10%;
     background: var(--white);
     text-align: left;
     border-bottom: 1px solid #f0f0f0; /* Subtle separator */
@@ -102,6 +102,7 @@ header {
     font-weight: 600;
     display: inline-block;
 }
+
 
 
 
